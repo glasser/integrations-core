@@ -22,12 +22,13 @@ instances:
     #
     # streams_count: 2
 
-    ## @param metric_whitelist - list - optional - default: ['.*']
-    ## List of regexes for metrics to collect. Note that you can only collect metrics
-    ## starting with "mapr."
+    ## @param metric_whitelist - list - optional
+    ## List of regexes for metrics to collect. Note that you can only collect metrics starting with "mapr.",
+    ## see https://github.com/DataDog/integrations-core/blob/master/mapr/datadog_checks/mapr/common.py
+    ## for the list of metrics you can collect.
     ## Collect all mapr related metrics by default
     #
-    # metric_whitelist: ["^mapr\..+$"]
+    # metric_whitelist: ['.*']
 
     ## @param ticket_location - string - optional
     ## The path to the MapR user ticket, if included it overrides the MAPR_TICKETFILE_LOCATION environment variable.
